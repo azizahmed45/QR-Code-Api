@@ -60,8 +60,8 @@ public class MainActivity extends AppCompatActivity {
                             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                                 if(response.isSuccessful()){
                                     //dialog
-                                    mDialogBuilder.setTitle("Result");
-                                    mDialogBuilder.setMessage(response.body().getResponse());
+                                    mDialogBuilder.setTitle(response.body().getResponse());
+                                    mDialogBuilder.setMessage(response.body().getInput());
 
                                 } else {
                                     mDialogBuilder.setTitle("Error");
